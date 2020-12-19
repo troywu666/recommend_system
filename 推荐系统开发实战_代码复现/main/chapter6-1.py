@@ -3,8 +3,8 @@
 @Version: 1.0
 @Autor: Troy Wu
 @Date: 2020-05-12 10:04:59
-@LastEditors: Troy Wu
-@LastEditTime: 2020-05-13 09:07:12
+LastEditors: Troy Wu
+LastEditTime: 2020-09-20 21:12:52
 '''
 import jieba
 import math
@@ -22,4 +22,5 @@ class TF_IDF:
             swlist.append(line.strip())
         return swlist
 
-    def 
+    
+    

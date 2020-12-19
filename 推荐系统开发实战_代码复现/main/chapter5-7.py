@@ -3,8 +3,8 @@
 @Version: 1.0
 @Autor: Troy Wu
 @Date: 2020-05-07 08:57:25
-@LastEditors: Troy Wu
-@LastEditTime: 2020-05-07 15:05:06
+LastEditors: Troy Wu
+LastEditTime: 2020-09-28 10:37:56
 '''
 import random
 import math
@@ -47,7 +47,7 @@ class ItemCFRec:
             itemSim = dict()
             item_user_count = dict()
             count = dict()
-            for user, item in self.splitData.items():
+            for user, item in self.trainData.items():
                 for i in item.keys():
                     item_user_count.setdefault(i, 0)
                     if self.trainData[str(user)][i] > 0:
@@ -95,5 +95,5 @@ class ItemCFRec:
         return hit / (precision * 1.0)
 
 if __name__ == '__main__':
-    ib = ItemCFRec('../data/ml-1m/ratings.dat', [1, 9])
+    ib = ItemCFRec(r'D:\troywu666\personal_stuff\Practice\推荐系统\推荐系统开发实战_代码复现\代码\data\ml-1m\ratings.dat', [1, 9])
     print(ib.precision())
